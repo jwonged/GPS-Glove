@@ -147,18 +147,5 @@ public class translateToC {
     //myfile.close();
     
     // Insert your code here!
-    /*
-    uBit.display.scroll("HELLO WORLD! :)");
-    while(1)
-    {
-        new MicroBitIOPinService(*uBit.ble, uBit.io);
-    
-    uBit.io.P0.setDigitalValue(1);
-
-    
-    uBit.sleep(1000);
-    uBit.io.P1.setDigitalValue(0);
-    uBit.io.P2.setDigitalValue(1);
-    uBit.sleep(1000);
-    }*/
+   
     
