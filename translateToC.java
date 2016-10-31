@@ -17,13 +17,14 @@ public class translateToC {
 		writer.println("	uBit.io.P2.setDigitalValue(0);");
 		
 		//set how long you will keep the light in one direction
-		//if (duration > 3000) {
-			//duration-=3000;
-			//holdDirtime = 3000;
-		//} else {
-			//holdDirtime = duration;
-			//duration =0;
-		//}
+		//Temp
+		if (duration > 3000) {
+			duration-=3000;
+			holdDirtime = 3000;
+		} else {
+			holdDirtime = duration;
+			duration =0;
+		}
 		//light up for 3000(or less) seconds 
 		//writer.println("	uBit.io.P"+pinVal+".setDigitalValue(1);"); //light up for 3s or less
 		//writer.println("	uBit.sleep("+holdDirtime+");");
