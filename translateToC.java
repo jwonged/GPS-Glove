@@ -160,7 +160,4 @@ public class translateToC {
     uBit.io.P2.setDigitalValue(1);
     uBit.sleep(1000);
     }*/
-    // If main exits, there may still be other fibers running or registered event handlers etc.
-    // Simply release this fiber, which will mean we enter the scheduler. Worse case, we then
-    // sit in the idle task forever, in a power efficient sleep.
     
