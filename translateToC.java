@@ -55,7 +55,7 @@ public class translateToC {
 		
 	}
 	
-	public static void microBitOutput {
+	public static void microBitOutput() {
 		PrintWriter writer = null;
 		int timeFactor = 1;
 		try {
