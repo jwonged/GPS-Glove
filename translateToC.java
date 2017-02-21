@@ -17,7 +17,6 @@ public class translateToC {
 		writer.println("	uBit.io.P2.setDigitalValue(0);");
 		
 		//set how long you will keep the light in one direction
-		//Temp
 		if (duration > 3000) {
 			duration-=3000;
 			holdDirtime = 3000;
@@ -25,15 +24,10 @@ public class translateToC {
 			holdDirtime = duration;
 			duration =0;
 		}
-		//light up for 3000(or less) seconds 
-		//writer.println("	uBit.io.P"+pinVal+".setDigitalValue(1);"); //light up for 3s or less
-		//writer.println("	uBit.sleep("+holdDirtime+");");
-		//writer.println("	uBit.io.P"+pinVal+".setDigitalValue(0);"); //off dir, change back to straight
-		//writer.println("	uBit.io.P1.setDigitalValue(1);");
 		
 		if (nextpinVal != 1) {
 			if (duration >= 6000) {
-				//continue straight until last 6 secs then point next directn blinking
+				//continue straight --> last 6 secs swap to next direction blinking mode
 				writer.println("	uBit.sleep("+(duration-6000)+"); ");
 				writer.println("	uBit.io.P1.setDigitalValue(0);");
 				writer.println("	for (int i=0; i<5; i++) {");
@@ -62,7 +56,6 @@ public class translateToC {
 	}
 	
 	public static void main(String[] args) {
-		initializeArr();//remove this for app
 		PrintWriter writer = null;
 		int timeFactor = 1;
 		try {
@@ -95,6 +88,7 @@ public class translateToC {
 				if (Integer.parseInt(dirNtime[i][0]) == 1) {
 					//left
 					pinVal = 0;
+					
 					//get next pin value if there is one
 					if ((i+1)<dirNtime.length) {
 						if (Integer.parseInt(dirNtime[i+1][0]) == 1) nextpinVal = 0;
@@ -131,21 +125,5 @@ public class translateToC {
 	}
 }
 
-
-    
-        //if ("1"==input[i]) {
-            
-        //}
-        //if ("1"==input[i]) {
-        //    std::cout<<input[i];
-        /*} else if ("2"==input[i]) { 
-            std::cout<<"2";
-        } else if ("3"==input[i]) { 
-            std::cout<<"3";
-        }*
-    
-    //myfile.close();
-    
-    // Insert your code here!
    
     
