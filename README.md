@@ -1,3 +1,3 @@
 # GPS-Glove
 
-For translating GPS Google Maps Commands after pulling in Android App - from Java to C++ for Glove MicroBit
+Use microBitOutput() for translating GPS Google Map commands in Android App to compilable code for MicroBit
